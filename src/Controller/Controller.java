@@ -4,25 +4,30 @@ import Model.Cliente;
 import Model.Equipamento;
 import java.util.ArrayList;
 
+//CRUD -> Criar, Ler, Atualizar, e Deletar
+
 public class Controller {
     private static ArrayList<Cliente> clientes = new ArrayList<>();
     private static ArrayList<Equipamento> equipamentos = new ArrayList<>();
+    private Cliente cliente;
+    private Equipamento equipamento;
+    private Cliente alterarcliente;
+    private Equipamento alterarequipamento;
 
-    //CRUD -> Criar, Ler, Atualizar, e Deletar
 
-    public void cadastrarCliente(Cliente cliente){
+    public void cadastrarCliente(){
         clientes.add(cliente);
     }
-    public void cadastrarEquipamento(Equipamento equipamento){
+    public void cadastrarEquipamento(){
         equipamentos.add(equipamento);
     }
-    public void removerCliente(Cliente cliente){
+    public void removerCliente(){
         clientes.remove(cliente);
     }
-    public void removerEquipamento(Equipamento equipamento){
+    public void removerEquipamento(){
         equipamentos.remove(equipamento);
     }
-    public void listarCliente(ArrayList<Cliente> clientes){
+    public void listarCliente(){
         if(clientes.isEmpty()){
             System.out.println("Sem cliente cadastrado");
         } else {
@@ -32,7 +37,7 @@ public class Controller {
             }
         }
     }
-    public void listarEquipamento(ArrayList<Equipamento> equipamentos){
+    public void listarEquipamento(){
         if(equipamentos.isEmpty()){
             System.out.println("Sem equipamento cadastrado");
         } else {
@@ -42,7 +47,7 @@ public class Controller {
             }
         }
     }
-    public void alterarCliente(Cliente alterarcliente) {
+    public void alterarCliente() {
         for (Cliente cliente : clientes){
             if (cliente.getId_cliente() == alterarcliente.getId_cliente()) { // Supondo que o Cliente tem um ID único
                 cliente = alterarcliente;
@@ -52,9 +57,11 @@ public class Controller {
             }
         }
     }
-    public void alterarEquipamento(Equipamento alterarequipamento){
+    public void alterarEquipamento(){
         for (Equipamento equipamento : equipamentos){
-            if (equipamento.getId() == alterarequipamento.getId()) { // Supondo que o Cliente tem um ID único
+
+            // Supondo que o Cliente tem um ID único
+            if (equipamento.getId_equipamento() == alterarequipamento.getId_equipamento()) {
                 equipamento = alterarequipamento;
 
                 System.out.println("Equipamento atualizado");
