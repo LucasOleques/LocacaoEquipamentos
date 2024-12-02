@@ -17,10 +17,15 @@ public class View {
             System.out.println("1. Adicionar Cliente");
             System.out.println("2. Alterar Cliente");
             System.out.println("3. Listar Clientes");
+            System.out.println("4. Excluir Clientes");
+            System.out.println("5. Adicionar Equipamento");
+            System.out.println("6. Alterar Equipamento");
+            System.out.println("7. Listar Equipamento");
+            System.out.println("8. Excluir Equipamento");
             System.out.println("0. Sair");
             System.out.print("Escolha uma opção: ");
             opcao = scan.nextInt();
-            scan.nextLine();
+
             switch (opcao) {
                 case 1:
                     controller.cadastrarCliente();
