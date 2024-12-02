@@ -4,8 +4,6 @@ import Model.Cliente;
 import Model.Equipamento;
 import java.util.ArrayList;
 
-//CRUD -> Criar, Ler, Atualizar, e Deletar
-
 public class Controller {
     private static ArrayList<Cliente> clientes = new ArrayList<>();
     private static ArrayList<Equipamento> equipamentos = new ArrayList<>();
